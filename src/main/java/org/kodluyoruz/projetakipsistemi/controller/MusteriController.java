@@ -33,4 +33,29 @@ public class MusteriController {
         return ResponseEntity.ok(musteriService.update(musteri));
     }
 
+    @DeleteMapping(value = "delete")
+    public ResponseEntity<?> delete(@RequestParam int id){
+        return ResponseEntity.ok(musteriService.delete(id));
+    }
+
+    @GetMapping(value = "login")
+    public ResponseEntity<?> login(@RequestParam("kullaniciAdi") String kullaniciAdi, @RequestParam("sifre") String sifre){
+        return  ResponseEntity.ok(musteriService.login(kullaniciAdi, sifre));
+    }
+
+    @GetMapping(value = "forgotPassword")
+    public ResponseEntity<?> forgotPassword(@RequestParam String mail){
+        return ResponseEntity.ok(musteriService.forgotPassword(mail));
+    }
+
+    @GetMapping(value = "musteriTeklifs")
+    public ResponseEntity<?> musteriTeklifs(@RequestParam int id){
+        return ResponseEntity.ok(musteriService.musteriTeklifs(id));
+    }
+
+    @GetMapping(value = "musteriProjeTaslaks")
+    public ResponseEntity<?> musteriProjeTaslaks(@RequestParam int id){
+        return ResponseEntity.ok(musteriService.musteriProjeTaslaks(id));
+    }
+
 }
