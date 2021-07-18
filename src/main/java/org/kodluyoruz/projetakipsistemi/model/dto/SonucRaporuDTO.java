@@ -7,10 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TeklifDTO{
+public class SonucRaporuDTO {
     private int id;
-    private String baslik;
     private String aciklama;
-    private String teklifDegeri;
-    private MusteriDTO musteri;
 }

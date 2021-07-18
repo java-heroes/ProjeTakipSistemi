@@ -4,13 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TeklifDTO{
+public class ProjeDTO {
     private int id;
-    private String baslik;
+    private String proje;
     private String aciklama;
-    private String teklifDegeri;
-    private MusteriDTO musteri;
+    private int projeDurum;
+    private List<GorevDTO> gorevs;
+    private SonucRaporuDTO sonucRaporu;
 }

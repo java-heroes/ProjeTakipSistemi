@@ -4,13 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TeklifDTO{
+public class GorevDTO {
     private int id;
-    private String baslik;
+    private String gorev;
     private String aciklama;
-    private String teklifDegeri;
-    private MusteriDTO musteri;
+    private Date baslamaTarihi;
+    private Date bitisTarihi;
+    private int gorevDurum;
 }

@@ -55,8 +55,8 @@ public class Gorev {
         }
     }
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "personel_id", referencedColumnName = "id")
+    @ManyToOne()
+    @JoinColumn(name="personel_id", referencedColumnName = "id")
     private Personel personel;
 
     @ManyToOne()

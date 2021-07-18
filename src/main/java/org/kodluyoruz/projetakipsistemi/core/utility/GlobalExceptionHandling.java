@@ -2,6 +2,7 @@ package org.kodluyoruz.projetakipsistemi.core.utility;
 
 import java.time.LocalDateTime;
 
+import org.kodluyoruz.projetakipsistemi.core.exception.AlreadyException;
 import org.kodluyoruz.projetakipsistemi.core.exception.NotFoundException;
 import org.kodluyoruz.projetakipsistemi.core.exception.ValidationException;
 import org.springframework.http.HttpStatus;
@@ -31,6 +32,15 @@ public class GlobalExceptionHandling extends ResponseEntityExceptionHandler {
         response.setDateTime(LocalDateTime.now());
         response.setMessage(exception.getMessage());
         ResponseEntity<Object> entity = new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+        return entity;
+    }
+
+    @ExceptionHandler(AlreadyException.class)
+    public ResponseEntity<Object> handleExceptions( AlreadyException exception, WebRequest webRequest) {
+        ExceptionResponse response = new ExceptionResponse();
+        response.setDateTime(LocalDateTime.now());
+        response.setMessage(exception.getMessage());
+        ResponseEntity<Object> entity = new ResponseEntity<>(response, HttpStatus.ALREADY_REPORTED);
         return entity;
     }
 

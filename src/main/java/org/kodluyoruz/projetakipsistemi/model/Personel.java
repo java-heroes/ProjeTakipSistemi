@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "personel")
@@ -13,8 +14,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Personel extends Kullanici{
 
-    @OneToOne(mappedBy = "personel")
-    private Gorev gorev;
+    @OneToMany(targetEntity=Gorev.class, mappedBy="personel",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Gorev> gorevs;
 
     @ManyToOne()
     @JoinColumn(name="takim_id", referencedColumnName = "id")

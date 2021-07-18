@@ -2,6 +2,7 @@ package org.kodluyoruz.projetakipsistemi.service;
 
 import com.github.dozermapper.core.Mapper;
 import org.kodluyoruz.projetakipsistemi.core.exception.MusteriNotFoundException;
+import org.kodluyoruz.projetakipsistemi.core.exception.UserAlreadyException;
 import org.kodluyoruz.projetakipsistemi.core.exception.ValidationException;
 import org.kodluyoruz.projetakipsistemi.core.utility.EmailServiceImpl;
 import org.kodluyoruz.projetakipsistemi.dao.IMusteriDAO;
@@ -26,7 +27,8 @@ public class MusteriService {
     @Autowired
     private Mapper dozerMapper;
     @Autowired
-    EmailServiceImpl emailService;
+    private EmailServiceImpl emailService;
+
 
     @Autowired
     public MusteriService(IMusteriDAO musteriDAO, ITeklifDAO teklifDAO, IProjeTaslagiDAO projeTaslagiDAO) {
@@ -35,7 +37,10 @@ public class MusteriService {
         this.projeTaslagiDAO = projeTaslagiDAO;
     }
 
-    public boolean kayit(Musteri musteri){
+    public boolean kayit(Musteri musteri) throws UserAlreadyException {
+        if (userExist(musteri.getKullaniciAdi(),musteri.getMail())){
+            throw new UserAlreadyException(musteri.getKullaniciAdi(),musteri.getMail());
+        }
         try{
             musteriDAO.save(musteri);
         }catch (Exception e){
@@ -118,6 +123,10 @@ public class MusteriService {
             projeTaslagiDTOS.add(dozerMapper.map(projeTaslagi,ProjeTaslagiDTO.class));
         });
         return projeTaslagiDTOS;
+    }
+
+    public boolean userExist(String kullaniciAdi, String mail){
+        return musteriDAO.findByKullaniciAdiOrMail(kullaniciAdi, mail) != null;
     }
 
 }

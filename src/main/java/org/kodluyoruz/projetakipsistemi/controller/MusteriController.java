@@ -1,5 +1,6 @@
 package org.kodluyoruz.projetakipsistemi.controller;
 
+import org.kodluyoruz.projetakipsistemi.core.exception.UserAlreadyException;
 import org.kodluyoruz.projetakipsistemi.model.Musteri;
 import org.kodluyoruz.projetakipsistemi.service.MusteriService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ public class MusteriController {
     MusteriService musteriService;
 
     @PostMapping(value = "kayit")
-    public ResponseEntity<?> kayit(@RequestBody Musteri musteri){
+    public ResponseEntity<?> kayit(@RequestBody Musteri musteri) throws UserAlreadyException {
         return ResponseEntity.ok(musteriService.kayit(musteri));
     }
 
