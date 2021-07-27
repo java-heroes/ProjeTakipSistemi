@@ -22,8 +22,8 @@ public class ProjeTaslagi {
     @Column(name = "asama")
     private String asama;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "musteri_id", referencedColumnName = "id")
+    @ManyToOne()
+    @JoinColumn(name="musteri_id", referencedColumnName = "id")
     private Musteri musteri;
 
 }

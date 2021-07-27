@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.kodluyoruz.projetakipsistemi.model.enums.Durum;
-import org.kodluyoruz.projetakipsistemi.model.enums.Yetki;
 
 import javax.persistence.*;
 import java.util.Date;

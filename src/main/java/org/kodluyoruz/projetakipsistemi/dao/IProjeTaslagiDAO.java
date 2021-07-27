@@ -1,5 +1,6 @@
 package org.kodluyoruz.projetakipsistemi.dao;
 
+import org.kodluyoruz.projetakipsistemi.model.Musteri;
 import org.kodluyoruz.projetakipsistemi.model.ProjeTaslagi;
 import org.springframework.data.jpa.repository.JpaRepository;
 

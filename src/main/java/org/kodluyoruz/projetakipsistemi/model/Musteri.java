@@ -19,8 +19,8 @@ import java.util.List;
 @NoArgsConstructor
 public class Musteri extends Kullanici{
 
-    @OneToOne(mappedBy = "musteri")
-    private ProjeTaslagi projeTaslagi;
+    @OneToMany(targetEntity=ProjeTaslagi.class, mappedBy="musteri",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<ProjeTaslagi> projeTaslagis = new ArrayList<>();
 
     @OneToMany(targetEntity=Teklif.class, mappedBy="musteri",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Teklif> teklifs = new ArrayList<>();

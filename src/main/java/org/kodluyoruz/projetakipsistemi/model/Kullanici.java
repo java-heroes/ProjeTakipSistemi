@@ -5,7 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
-import org.kodluyoruz.projetakipsistemi.model.enums.Yetki;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
