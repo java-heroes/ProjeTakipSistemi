@@ -24,8 +24,8 @@ public class Takim {
     @Column(name = "aciklama")
     private String aciklama;
 
-    @OneToMany(targetEntity=Personel.class, mappedBy="takim",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Personel> personels = new ArrayList<>();
+//    @OneToMany(targetEntity=Personel.class, mappedBy="takim",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+//    private List<Personel> personels = new ArrayList<>();
 
     @OneToMany(targetEntity=Proje.class, mappedBy="takim",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Proje> projes = new ArrayList<>();
