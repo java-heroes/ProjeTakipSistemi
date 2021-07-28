@@ -11,4 +11,5 @@ import java.util.List;
 @NoArgsConstructor
 public class PersonelDTO extends KullaniciDTO{
     private List<GorevDTO> gorevs;
+    private int takimId;
 }
