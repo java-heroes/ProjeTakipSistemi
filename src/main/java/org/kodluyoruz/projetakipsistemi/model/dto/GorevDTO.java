@@ -16,4 +16,6 @@ public class GorevDTO {
     private Date baslamaTarihi;
     private Date bitisTarihi;
     private int gorevDurum;
+    private int projeId;
+    private int personelId;
 }
