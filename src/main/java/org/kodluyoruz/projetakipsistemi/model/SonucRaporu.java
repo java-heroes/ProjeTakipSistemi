@@ -19,7 +19,7 @@ public class SonucRaporu {
     @Column(name = "aciklama")
     private String aciklama;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @JoinColumn(name = "proje_id", referencedColumnName = "id")
     private Proje proje;
 }

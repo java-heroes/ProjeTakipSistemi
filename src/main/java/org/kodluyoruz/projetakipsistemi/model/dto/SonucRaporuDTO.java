@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class SonucRaporuDTO {
     private int id;
     private String aciklama;
+    private int projeId;
 }

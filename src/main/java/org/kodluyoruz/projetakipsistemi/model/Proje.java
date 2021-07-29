@@ -60,6 +60,6 @@ public class Proje {
     @OneToMany(targetEntity=Gorev.class, mappedBy="proje",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Gorev> gorevs = new ArrayList<>();
 
-    @OneToOne(mappedBy = "proje")
-    private SonucRaporu sonucRaporu;
+    @OneToMany(targetEntity=SonucRaporu.class, mappedBy="proje",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<SonucRaporu> sonucRaporus;
 }

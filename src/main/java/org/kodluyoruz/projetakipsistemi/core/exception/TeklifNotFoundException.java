@@ -1,5 +1,6 @@
 package org.kodluyoruz.projetakipsistemi.core.exception;
 
+@SuppressWarnings("serial")
 public class TeklifNotFoundException extends NotFoundException{
     public TeklifNotFoundException(){
         super("Teklif Bulunamadı");
