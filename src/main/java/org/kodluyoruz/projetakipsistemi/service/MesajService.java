@@ -1,7 +1,6 @@
 package org.kodluyoruz.projetakipsistemi.service;
 
-import com.github.dozermapper.core.DozerBeanMapper;
-import org.apache.catalina.mapper.Mapper;
+import com.github.dozermapper.core.Mapper;
 import org.kodluyoruz.projetakipsistemi.dao.IMesajDao;
 import org.kodluyoruz.projetakipsistemi.model.Mesaj;
 import org.kodluyoruz.projetakipsistemi.model.dto.MesajDto;
@@ -21,10 +20,16 @@ public class MesajService {
         List<MesajDto> mesajList= new ArrayList<>();
         mesajDao.findAll().forEach(mesaj -> {
             mesajList.add(dozerMapper.map(mesaj,MesajDto.class));
-
         });
         return mesajList ;
+    }
+    public MesajDto add (MesajDto mesajDto) {
+        Mesaj mesaj = dozerMapper.map(mesajDto,Mesaj.class);
+        mesajDao.save(mesaj);
+        return mesajDto ;
 
     }
+
+
 
 }
