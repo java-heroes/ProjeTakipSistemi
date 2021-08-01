@@ -21,7 +21,14 @@ public class MesajService {
             mesajList.add(dozerMapper.map(mesaj,MesajDto.class));
         });
         return mesajList ;
+    }
+    public MesajDto add (MesajDto mesajDto) {
+        Mesaj mesaj = dozerMapper.map(mesajDto,Mesaj.class);
+        mesajDao.save(mesaj);
+        return mesajDto ;
 
     }
+
+
 
 }
