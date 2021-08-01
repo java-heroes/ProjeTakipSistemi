@@ -112,4 +112,22 @@ public class GorevService {
         }
     }
 
+    public List<GorevDTO> getGorevByProjeId(int id){
+        Optional<Proje> proje = projeDAO.findById(id);
+        if (!proje.isPresent()){
+            throw new ProjeNotFoundException();
+        }
+        try{
+            List<GorevDTO> gorevDTOList = new ArrayList<>();
+            gorevDAO.findAllByProje_Id(id).forEach(gorev -> {
+                gorevDTOList.add(dozerMapper.map(gorev,GorevDTO.class));
+                gorevDTOList.get(gorevDTOList.size()-1).setPersonelId(gorev.getPersonel().getId());
+                gorevDTOList.get(gorevDTOList.size()-1).setProjeId(gorev.getProje().getId());
+            });
+            return gorevDTOList;
+        }catch (Exception e){
+            throw new ValidationException();
+        }
+    }
+
 }

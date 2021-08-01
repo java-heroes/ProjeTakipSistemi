@@ -37,4 +37,9 @@ public class GorevController {
         return ResponseEntity.ok(gorevService.update(gorevDTO));
     }
 
+    @GetMapping(value = "getAllByProje")
+    public ResponseEntity<?> getAllByProje(@RequestParam int id){
+        return ResponseEntity.ok(gorevService.getGorevByProjeId(id));
+    }
+
 }
