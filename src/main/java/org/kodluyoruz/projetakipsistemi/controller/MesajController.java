@@ -19,5 +19,17 @@ public class MesajController {
     public ResponseEntity<?> add(@RequestBody MesajDto mesajDto) {
         return ResponseEntity.ok(mesajService.add(mesajDto));
     }
+    @PutMapping(value = "update")
+    public ResponseEntity<?> update(@RequestBody MesajDto mesajDto){
+        return ResponseEntity.ok(mesajService.update(mesajDto));
+    }
+    @DeleteMapping(value = "delete")
+    public ResponseEntity<?> delete(@RequestParam MesajDto mesajDto){
+        return ResponseEntity.ok(mesajService.delete(mesajDto));
+    }
+    @GetMapping(value = "get")
+    public ResponseEntity<?> get(@RequestParam MesajDto mesajDto) {
+        return ResponseEntity.ok(mesajService.get(mesajDto));
 
+    }
 }
