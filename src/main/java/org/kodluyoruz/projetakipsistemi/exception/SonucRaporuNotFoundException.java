@@ -1,4 +1,6 @@
-package org.kodluyoruz.projetakipsistemi.core.exception;
+package org.kodluyoruz.projetakipsistemi.exception;
+
+import org.kodluyoruz.projetakipsistemi.core.exception.NotFoundException;
 
 @SuppressWarnings("serial")
 public class SonucRaporuNotFoundException extends NotFoundException {

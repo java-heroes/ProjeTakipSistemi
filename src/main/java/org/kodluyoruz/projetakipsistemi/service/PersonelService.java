@@ -5,13 +5,12 @@ import org.kodluyoruz.projetakipsistemi.core.exception.*;
 import org.kodluyoruz.projetakipsistemi.core.utility.EmailServiceImpl;
 import org.kodluyoruz.projetakipsistemi.dao.IPersonelDAO;
 import org.kodluyoruz.projetakipsistemi.dao.ITakimDAO;
-import org.kodluyoruz.projetakipsistemi.dao.IYoneticiDAO;
+import org.kodluyoruz.projetakipsistemi.exception.PersonelNotFoundException;
+import org.kodluyoruz.projetakipsistemi.exception.TakimNotFoundException;
 import org.kodluyoruz.projetakipsistemi.model.Personel;
 import org.kodluyoruz.projetakipsistemi.model.Takim;
-import org.kodluyoruz.projetakipsistemi.model.Yonetici;
 import org.kodluyoruz.projetakipsistemi.model.dto.PersonelDTO;
 import org.kodluyoruz.projetakipsistemi.model.dto.TakimDTO;
-import org.kodluyoruz.projetakipsistemi.model.dto.YoneticiDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,9 +1,9 @@
 package org.kodluyoruz.projetakipsistemi.service;
 
 import com.github.dozermapper.core.Mapper;
-import org.kodluyoruz.projetakipsistemi.core.exception.GorevNotFoundException;
-import org.kodluyoruz.projetakipsistemi.core.exception.PersonelNotFoundException;
-import org.kodluyoruz.projetakipsistemi.core.exception.ProjeNotFoundException;
+import org.kodluyoruz.projetakipsistemi.exception.GorevNotFoundException;
+import org.kodluyoruz.projetakipsistemi.exception.PersonelNotFoundException;
+import org.kodluyoruz.projetakipsistemi.exception.ProjeNotFoundException;
 import org.kodluyoruz.projetakipsistemi.core.exception.ValidationException;
 import org.kodluyoruz.projetakipsistemi.dao.IGorevDAO;
 import org.kodluyoruz.projetakipsistemi.dao.IPersonelDAO;

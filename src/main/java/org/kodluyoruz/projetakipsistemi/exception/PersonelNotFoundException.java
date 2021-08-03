@@ -1,7 +1,9 @@
-package org.kodluyoruz.projetakipsistemi.core.exception;
+package org.kodluyoruz.projetakipsistemi.exception;
+
+import org.kodluyoruz.projetakipsistemi.core.exception.NotFoundException;
 
 @SuppressWarnings("serial")
-public class PersonelNotFoundException extends NotFoundException{
+public class PersonelNotFoundException extends NotFoundException {
     public PersonelNotFoundException(int id) {
         super(String.format("%s id alanına sahip personel bulunamadı", id));
     }

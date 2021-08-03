@@ -1,8 +1,7 @@
 package org.kodluyoruz.projetakipsistemi.service;
 
 import com.github.dozermapper.core.Mapper;
-import org.hibernate.sql.Update;
-import org.kodluyoruz.projetakipsistemi.core.exception.TeklifNotFoundException;
+import org.kodluyoruz.projetakipsistemi.exception.TeklifNotFoundException;
 import org.kodluyoruz.projetakipsistemi.core.exception.ValidationException;
 import org.kodluyoruz.projetakipsistemi.dao.IMusteriDAO;
 import org.kodluyoruz.projetakipsistemi.dao.ITeklifDAO;

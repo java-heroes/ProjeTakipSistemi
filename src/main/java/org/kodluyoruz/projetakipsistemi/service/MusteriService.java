@@ -1,7 +1,7 @@
 package org.kodluyoruz.projetakipsistemi.service;
 
 import com.github.dozermapper.core.Mapper;
-import org.kodluyoruz.projetakipsistemi.core.exception.MusteriNotFoundException;
+import org.kodluyoruz.projetakipsistemi.exception.MusteriNotFoundException;
 import org.kodluyoruz.projetakipsistemi.core.exception.UserAlreadyException;
 import org.kodluyoruz.projetakipsistemi.core.exception.ValidationException;
 import org.kodluyoruz.projetakipsistemi.core.utility.EmailServiceImpl;

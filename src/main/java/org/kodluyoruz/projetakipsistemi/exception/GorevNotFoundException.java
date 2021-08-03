@@ -1,7 +1,9 @@
-package org.kodluyoruz.projetakipsistemi.core.exception;
+package org.kodluyoruz.projetakipsistemi.exception;
+
+import org.kodluyoruz.projetakipsistemi.core.exception.NotFoundException;
 
 @SuppressWarnings("serial")
-public class GorevNotFoundException extends NotFoundException{
+public class GorevNotFoundException extends NotFoundException {
     public GorevNotFoundException(){
         super("Görev Bulunamadı");
     }

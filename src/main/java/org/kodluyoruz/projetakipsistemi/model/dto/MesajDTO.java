@@ -8,7 +8,7 @@ import org.kodluyoruz.projetakipsistemi.model.Kullanici;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MesajDto {
+public class MesajDTO {
     private int id;
     private String baslik;
     private String mesajinIcerigi;

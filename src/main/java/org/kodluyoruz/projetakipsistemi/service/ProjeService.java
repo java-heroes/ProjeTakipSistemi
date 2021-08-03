@@ -1,8 +1,8 @@
 package org.kodluyoruz.projetakipsistemi.service;
 
 import com.github.dozermapper.core.Mapper;
-import org.kodluyoruz.projetakipsistemi.core.exception.ProjeNotFoundException;
-import org.kodluyoruz.projetakipsistemi.core.exception.TakimNotFoundException;
+import org.kodluyoruz.projetakipsistemi.exception.ProjeNotFoundException;
+import org.kodluyoruz.projetakipsistemi.exception.TakimNotFoundException;
 import org.kodluyoruz.projetakipsistemi.core.exception.ValidationException;
 import org.kodluyoruz.projetakipsistemi.dao.IProjeDAO;
 import org.kodluyoruz.projetakipsistemi.dao.ITakimDAO;
