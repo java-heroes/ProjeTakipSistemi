@@ -18,8 +18,8 @@ public class Mesaj {
     private int id ;
     @Column(name = "baslik")
     private String baslik;
-    @Column(name = "mesajin_içerigi")
-    private String mesajinIçerigi;
+    @Column(name = "mesajin_icerigi")
+    private String mesajinIcerigi;
     @OneToOne
     @JoinColumn(name = "alıcıId")
     private Kullanici alici;

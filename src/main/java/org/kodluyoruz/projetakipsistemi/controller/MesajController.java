@@ -18,7 +18,6 @@ public class MesajController {
     @PostMapping(value = "add")
     public ResponseEntity<?> add(@RequestBody MesajDto mesajDto) {
         return ResponseEntity.ok(mesajService.add(mesajDto));
-
     }
 
 }

@@ -11,7 +11,7 @@ import org.kodluyoruz.projetakipsistemi.model.Kullanici;
 public class MesajDto {
     private int id;
     private String baslik;
-    private String mesajinIçerigi;
+    private String mesajinIcerigi;
     private Kullanici alici;
     private Kullanici gonderen;
 
